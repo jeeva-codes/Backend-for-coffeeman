@@ -52,7 +52,7 @@ app.post('/login',async(req,res)=>{
        
        }
         catch (err){
-        return  res.status(500).json('invalid',err)
+        return  res.status(500).json({ error: 'invalid', details: err.message })
        }
 })
 
