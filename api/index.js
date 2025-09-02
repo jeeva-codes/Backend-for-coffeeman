@@ -4,7 +4,6 @@ const mongoose=require('mongoose')
 const cors=require('cors')
 
 const app=express()
-const PORT = process.env.PORT || 5000;
 app.use(express.json())
 
 app.use(cors({
@@ -57,7 +56,4 @@ app.post('/login',async(req,res)=>{
        }
 })
 
-app.listen(PORT,()=>{
-    console.log('RUNNING ON PORT 5000');
-    
-})
+module.exports = app;
